@@ -2,16 +2,15 @@ class Student
   attr_accessor :id, :name, :grade
 
   def self.new_from_db(row)
-    new_song = self.new  # selfnew_song.id = row[0]
-    new_song.name =  row[1]
-    new_song.length = row[2]
-    new_song  # return the newly created instance.new is the same as running Song.new
-    
+    new_student = self.new
+    new_student.id = row[0]
+    new_student.name =  row[1]
+    new_student.grade = row[2]
+    new_student  # return the newly created instance
   end
 
   def self.all
-    # retrieve all the rows from the "Students" database
-    # remember each row should be a new instance of the Student class
+    
   end
 
   def self.find_by_name(name)
