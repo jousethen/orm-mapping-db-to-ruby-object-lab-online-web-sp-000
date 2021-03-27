@@ -30,9 +30,9 @@ class Student
  
     students = DB[:conn].execute(sql)
     
-    students.each do |row|
+    students.map do |row|
       self.new_from_db(row)
-    end
+    end.first
   end
   
   def save
