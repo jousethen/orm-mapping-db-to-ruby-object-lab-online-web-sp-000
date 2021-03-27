@@ -10,10 +10,18 @@ class Student
   end
 
   def self.all
-    sql = <<-SQL
+    sql= <<-SQL
           SELECT * FROM students
-          
-          SQL 
+          SQL
+ 
+    studnets = DB[:conn].execute(sql)
+    
+    student.each do |row|
+    end
+    
+    
+  end
+    
     
   end
 
